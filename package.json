@@ -1,0 +1,10 @@
+{
+  "name": "git-1c",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "cd scripts && ext2cfe.cmd ../src ../dist/git-1c.cfe Git"
+  },
+  "keywords": [],
+  "author": "Bushin Ilya",
+  "license": "MIT"
+}
