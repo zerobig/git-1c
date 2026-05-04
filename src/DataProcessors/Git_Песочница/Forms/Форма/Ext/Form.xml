@@ -1,0 +1,728 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcssch="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.20">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаПутьКРепозиторию" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа путь к репозиторию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа путь к репозиторию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПутьКРепозиториюРасширеннаяПодсказка" id="42"/>
+			<ChildItems>
+				<InputField name="Путь" id="10">
+					<DataPath>Путь</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+					<EditTextUpdate>DontUse</EditTextUpdate>
+					<ContextMenu name="ПутьКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПутьРасширеннаяПодсказка" id="12"/>
+					<Events>
+						<Event name="EditTextChange">ПутьИзменениеТекстаРедактирования</Event>
+					</Events>
+				</InputField>
+				<Button name="ОбновитьГраф" id="39">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОбновитьГраф</CommandName>
+					<ExtendedTooltip name="ОбновитьГрафРасширеннаяПодсказка" id="40"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<LabelField name="ТекущаяВетка" id="21">
+			<DataPath>ТекущаяВетка</DataPath>
+			<ContextMenu name="ТекущаяВеткаКонтекстноеМеню" id="22"/>
+			<ExtendedTooltip name="ТекущаяВеткаРасширеннаяПодсказка" id="23"/>
+		</LabelField>
+		<UsualGroup name="Группа1" id="1">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛевая" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа левая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛеваяРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<HTMLDocumentField name="ПолеHtml" id="7">
+							<DataPath>ПолеHtml</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Граф репозитория</v8:content>
+								</v8:item>
+							</Title>
+							<Width>500</Width>
+							<ContextMenu name="ПолеHtmlКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ПолеHtmlРасширеннаяПодсказка" id="9"/>
+						</HTMLDocumentField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПравая" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа правая</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПраваяРасширеннаяПодсказка" id="6"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаИнициализация" id="19">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Инициализация</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа инициализация</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаИнициализацияРасширеннаяПодсказка" id="20"/>
+							<ChildItems>
+								<Button name="ИнициализироватьРепозиторий" id="13">
+									<Type>UsualButton</Type>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.ИнициализироватьРепозиторий</CommandName>
+									<ExtendedTooltip name="ИнициализироватьРепозиторийРасширеннаяПодсказка" id="14"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаБазовыеОперации" id="15">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Базовые операции</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа базовые операции</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаБазовыеОперацииРасширеннаяПодсказка" id="16"/>
+							<ChildItems>
+								<UsualGroup name="Группа3" id="84">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="85"/>
+									<ChildItems>
+										<Table name="ИзмененныеФайлы" id="52">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Width>1</Width>
+											<Height>4</Height>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<VerticalStretch>false</VerticalStretch>
+											<DataPath>ИзмененныеФайлы</DataPath>
+											<RowPictureDataPath>ИзмененныеФайлы.Picture</RowPictureDataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>CheckAll</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>Pickup</ExcludedCommand>
+												<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+												<ExcludedCommand>SearchHistory</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+												<ExcludedCommand>UncheckAll</ExcludedCommand>
+											</CommandSet>
+											<ContextMenu name="ИзмененныеФайлыКонтекстноеМеню" id="53"/>
+											<AutoCommandBar name="ИзмененныеФайлыКоманднаяПанель" id="54"/>
+											<ExtendedTooltip name="ИзмененныеФайлыРасширеннаяПодсказка" id="55"/>
+											<SearchStringAddition name="ИзмененныеФайлыСтрокаПоиска" id="56">
+												<AdditionSource>
+													<Item>ИзмененныеФайлы</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИзмененныеФайлыСтрокаПоискаКонтекстноеМеню" id="57"/>
+												<ExtendedTooltip name="ИзмененныеФайлыСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИзмененныеФайлыСостояниеПросмотра" id="59">
+												<AdditionSource>
+													<Item>ИзмененныеФайлы</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИзмененныеФайлыСостояниеПросмотраКонтекстноеМеню" id="60"/>
+												<ExtendedTooltip name="ИзмененныеФайлыСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИзмененныеФайлыУправлениеПоиском" id="62">
+												<AdditionSource>
+													<Item>ИзмененныеФайлы</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИзмененныеФайлыУправлениеПоискомКонтекстноеМеню" id="63"/>
+												<ExtendedTooltip name="ИзмененныеФайлыУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИзмененныеФайлыЗначение" id="65">
+													<DataPath>ИзмененныеФайлы.Value</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ИзмененныеФайлыЗначениеКонтекстноеМеню" id="66"/>
+													<ExtendedTooltip name="ИзмененныеФайлыЗначениеРасширеннаяПодсказка" id="67"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+										<UsualGroup name="Группа4" id="86">
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="87"/>
+											<ChildItems>
+												<Button name="ДобавитьИзмененияФайла" id="88">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ДобавитьИзмененияФайла</CommandName>
+													<ExtendedTooltip name="ДобавитьИзмененияФайлаРасширеннаяПодсказка" id="89"/>
+												</Button>
+												<Button name="УдалитьИзменениеФайла" id="90">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.УдалитьИзменениеФайла</CommandName>
+													<ExtendedTooltip name="УдалитьИзменениеФайлаРасширеннаяПодсказка" id="91"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<Table name="ДобавленныеФайлы" id="68">
+											<Representation>List</Representation>
+											<CommandBarLocation>None</CommandBarLocation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<Width>1</Width>
+											<Height>4</Height>
+											<Header>false</Header>
+											<HorizontalLines>false</HorizontalLines>
+											<VerticalLines>false</VerticalLines>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<VerticalStretch>false</VerticalStretch>
+											<DataPath>ДобавленныеФайлы</DataPath>
+											<RowPictureDataPath>ДобавленныеФайлы.Picture</RowPictureDataPath>
+											<CommandSet>
+												<ExcludedCommand>Add</ExcludedCommand>
+												<ExcludedCommand>CancelSearch</ExcludedCommand>
+												<ExcludedCommand>Change</ExcludedCommand>
+												<ExcludedCommand>CheckAll</ExcludedCommand>
+												<ExcludedCommand>Copy</ExcludedCommand>
+												<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+												<ExcludedCommand>Delete</ExcludedCommand>
+												<ExcludedCommand>EndEdit</ExcludedCommand>
+												<ExcludedCommand>Find</ExcludedCommand>
+												<ExcludedCommand>FindByCurrentValue</ExcludedCommand>
+												<ExcludedCommand>MoveDown</ExcludedCommand>
+												<ExcludedCommand>MoveUp</ExcludedCommand>
+												<ExcludedCommand>Pickup</ExcludedCommand>
+												<ExcludedCommand>SearchEverywhere</ExcludedCommand>
+												<ExcludedCommand>SearchHistory</ExcludedCommand>
+												<ExcludedCommand>SelectAll</ExcludedCommand>
+												<ExcludedCommand>ShowMultipleSelection</ExcludedCommand>
+												<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+												<ExcludedCommand>SortListAsc</ExcludedCommand>
+												<ExcludedCommand>SortListDesc</ExcludedCommand>
+												<ExcludedCommand>UncheckAll</ExcludedCommand>
+											</CommandSet>
+											<ContextMenu name="ДобавленныеФайлыКонтекстноеМеню" id="69"/>
+											<AutoCommandBar name="ДобавленныеФайлыКоманднаяПанель" id="70"/>
+											<ExtendedTooltip name="ДобавленныеФайлыРасширеннаяПодсказка" id="71"/>
+											<SearchStringAddition name="ДобавленныеФайлыСтрокаПоиска" id="72">
+												<AdditionSource>
+													<Item>ДобавленныеФайлы</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДобавленныеФайлыСтрокаПоискаКонтекстноеМеню" id="73"/>
+												<ExtendedTooltip name="ДобавленныеФайлыСтрокаПоискаРасширеннаяПодсказка" id="74"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДобавленныеФайлыСостояниеПросмотра" id="75">
+												<AdditionSource>
+													<Item>ДобавленныеФайлы</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДобавленныеФайлыСостояниеПросмотраКонтекстноеМеню" id="76"/>
+												<ExtendedTooltip name="ДобавленныеФайлыСостояниеПросмотраРасширеннаяПодсказка" id="77"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДобавленныеФайлыУправлениеПоиском" id="78">
+												<AdditionSource>
+													<Item>ДобавленныеФайлы</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДобавленныеФайлыУправлениеПоискомКонтекстноеМеню" id="79"/>
+												<ExtendedTooltip name="ДобавленныеФайлыУправлениеПоискомРасширеннаяПодсказка" id="80"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ДобавленныеФайлыЗначение" id="81">
+													<DataPath>ДобавленныеФайлы.Value</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+													<ContextMenu name="ДобавленныеФайлыЗначениеКонтекстноеМеню" id="82"/>
+													<ExtendedTooltip name="ДобавленныеФайлыЗначениеРасширеннаяПодсказка" id="83"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа5" id="94">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<Button name="ДобавитьИзменения" id="17">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ДобавитьВсеИзменения</CommandName>
+											<ExtendedTooltip name="ДобавитьИзмененияРасширеннаяПодсказка" id="18"/>
+										</Button>
+										<Button name="УдалитьВсеИзменения" id="92">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.УдалитьВсеИзменения</CommandName>
+											<ExtendedTooltip name="УдалитьВсеИзмененияРасширеннаяПодсказка" id="93"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаВетвление" id="24">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ветвление</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа ветвление</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаВетвлениеРасширеннаяПодсказка" id="25"/>
+							<ChildItems>
+								<InputField name="ИмяВетки" id="30">
+									<DataPath>ИмяВетки</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ИмяВеткиКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="ИмяВеткиРасширеннаяПодсказка" id="32"/>
+								</InputField>
+								<UsualGroup name="Группа2" id="33">
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="34"/>
+									<ChildItems>
+										<Button name="СоздатьВетку" id="26">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.СоздатьВетку</CommandName>
+											<ExtendedTooltip name="СоздатьВеткуРасширеннаяПодсказка" id="27"/>
+										</Button>
+										<Button name="ПереименоватьВетку" id="28">
+											<Type>UsualButton</Type>
+											<HorizontalStretch>true</HorizontalStretch>
+											<CommandName>Form.Command.ПереименоватьВетку</CommandName>
+											<ExtendedTooltip name="ПереименоватьВеткуРасширеннаяПодсказка" id="29"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<Button name="ПереключитьсяНаВетку" id="50">
+									<Type>UsualButton</Type>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.ПереключитьсяНаВетку</CommandName>
+									<ExtendedTooltip name="ПереключитьсяНаВеткуРасширеннаяПодсказка" id="51"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаКоммиты" id="43">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Коммиты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа коммиты</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="ГруппаКоммитыРасширеннаяПодсказка" id="44"/>
+							<ChildItems>
+								<InputField name="СообщениеКоммита" id="45">
+									<DataPath>СообщениеКоммита</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="СообщениеКоммитаКонтекстноеМеню" id="46"/>
+									<ExtendedTooltip name="СообщениеКоммитаРасширеннаяПодсказка" id="47"/>
+								</InputField>
+								<Button name="ДобавитьКоммит" id="48">
+									<Type>UsualButton</Type>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.ДобавитьКоммит</CommandName>
+									<ExtendedTooltip name="ДобавитьКоммитРасширеннаяПодсказка" id="49"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаИзменениеДанных" id="35">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Изменение данных в репозитории</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа изменение данных</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ГруппаИзменениеДанныхРасширеннаяПодсказка" id="36"/>
+							<ChildItems>
+								<Button name="ИзменитьДанные" id="37">
+									<Type>UsualButton</Type>
+									<HorizontalStretch>true</HorizontalStretch>
+									<CommandName>Form.Command.ИзменитьДанные</CommandName>
+									<ExtendedTooltip name="ИзменитьДанныеРасширеннаяПодсказка" id="38"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.Git_Песочница</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолеHtml" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле html</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Путь" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ТекущаяВетка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая ветка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяВетки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя ветки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="СообщениеКоммита" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сообщение коммита</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<FillCheck>ShowError</FillCheck>
+		</Attribute>
+		<Attribute name="ИзмененныеФайлы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Измененные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДобавленныеФайлы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавленные файлы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИнициализироватьРепозиторий" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициализировать репозиторий (git init)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инициализировать репозиторий</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИнициализироватьРепозиторий</Action>
+		</Command>
+		<Command name="ДобавитьВсеИзменения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все изменения (git add .)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="СоздатьВетку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ветку (git branch)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать ветку</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ПереименоватьВетку" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать ветку (git branch -M)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переименовать ветку</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ИзменитьДанные" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить данные (файл README.md)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ИзменитьДанные</Action>
+		</Command>
+		<Command name="ОбновитьГраф" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить граф</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить граф</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ДобавитьКоммит" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить коммит (git commit)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить коммит</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ПереключитьсяНаВетку" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключиться на ветку (git checkout)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключиться на ветку</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+		<Command name="ДобавитьИзмененияФайла" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить изменения файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить изменения файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveRight</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьИзменениеФайла" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить изменение файла</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить изменение файла</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="УдалитьВсеИзменения" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все изменения (git restore --staged)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+		</Command>
+	</Commands>
+</Form>

@@ -51,7 +51,7 @@
 			</UsePurposes>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>0.0.1</Version>
+			<Version>0.0.2</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -62,12 +62,19 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Subsystem>Git</Subsystem>
+			<CommonModule>Git_БазовыеОперацииКлиент</CommonModule>
+			<CommonModule>Git_ВетвлениеКлиент</CommonModule>
 			<CommonModule>Git_ВыполнениеКомандКлиент</CommonModule>
 			<CommonModule>Git_Граф</CommonModule>
 			<CommonModule>Git_ГрафВетвь</CommonModule>
 			<CommonModule>Git_ГрафТочка</CommonModule>
+			<CommonModule>Git_ИнициализацияКлиент</CommonModule>
 			<CommonModule>Git_КоммитыКлиент</CommonModule>
+			<CommonModule>Git_УдаленныйРепозиторийКлиент</CommonModule>
+			<DataProcessor>Git_Песочница</DataProcessor>
 			<DataProcessor>Git_ПостроительГрафа</DataProcessor>
+			<DataProcessor>Git_Тесты</DataProcessor>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
