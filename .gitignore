@@ -1,9 +1,0 @@
-*.log
-*/ConfigDumpInfo.xml
-*.env
-
-build/
-build
-
-# compiled output
-dist
