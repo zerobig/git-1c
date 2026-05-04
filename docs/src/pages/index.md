@@ -12,7 +12,7 @@ slug: /
 ## Описание
 
 1. Расширение позволяет считывать информацию о логах git репозитория и отображать их в виде графа:
-![image](https://github.com/zerobig/git-1c/blob/main/docs/static/screenshot_1.png)
+![image](../../static/screenshot_1.png)
 
 2. Реализован ряд команд git: add, commit, push, branch, checkout, ststus
 
