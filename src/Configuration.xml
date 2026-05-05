@@ -72,9 +72,11 @@
 			<CommonModule>Git_ИнициализацияКлиент</CommonModule>
 			<CommonModule>Git_КоммитыКлиент</CommonModule>
 			<CommonModule>Git_УдаленныйРепозиторийКлиент</CommonModule>
+			<CommonModule>Git_PullКлиент</CommonModule>
 			<DataProcessor>Git_Песочница</DataProcessor>
 			<DataProcessor>Git_ПостроительГрафа</DataProcessor>
 			<DataProcessor>Git_Тесты</DataProcessor>
+			
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
